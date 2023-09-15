@@ -1,0 +1,31 @@
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+#mainHeading {
+    color: #2A6A8E;
+}
+
+.highlight {
+    color: #2A6A8E;
+}
+
+#introText{ 
+    width: 471px;
+    float: left;
+}
+
+#box{
+    height: 90px;
+    background: #2A6A8E;
+    padding: 14px 0px 0px 0px;
+}
+
+#name{ 
+    color: #f4f4f4;
+   font-family: glory;
+   width: 230px;
+   margin: 0px 0px 0px 400px;
+
+}
