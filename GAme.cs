@@ -4,7 +4,7 @@ class Program
 {
     static void Main()
     {
-        Console.WriteLine("Welcome to the Number Guessing Game!");
+        Console.WriteLine("Welcome to the Number Guessing Game! :)");
         
         // Generate a random number between 1 and 100.
         Random random = new Random();
