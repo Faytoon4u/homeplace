@@ -11,45 +11,47 @@ body {
     color: #2A6A8E;
 }
 
-#introText{ 
+#introText {
     width: 471px;
     float: left;
 }
 
-#box{
+#box {
     height: 90px;
     background: #2A6A8E;
     padding: 14px 0px 0px 0px;
+    position: fixed;
+    width: 3000px;
 }
 
-#name{ 
+#name {
     color: #ffffff;
-   font-family: glory;
-   width: 230px;
-   margin: 0px 0px 0px 400px;
-  
+    font-family: glory;
+    width: 230px;
+    margin: 0px 0px 0px 400px;
+
 }
 
-#leftColum{
+#leftColum {
     width: 630px;
     float: left;
-    margin-top: 10px;
+    margin-top: 130px;
 }
 
-#middleColum{
+#middleColum {
     width: 283px;
     float: left;
     margin-left: 30px;
-    margin-top: 20px;
+    margin-top: 130px;
 }
 
-#rightColum{ 
+#rightColum {
     width: 472px;
     float: right;
-    margin-top: 20px;
+    margin-top: 130px;
 }
 
-#Boxx{
+#Boxx {
     width: 427px;
     height: 107px;
     background: #e2eefc;
@@ -59,18 +61,18 @@ body {
     border-radius: 5px;
 }
 
-#apps{ 
+#apps {
     width: 427px;
-        margin-right: 10px;
+    margin-right: 10px;
 
 }
 
-#socials{
+#socials {
     margin-left: 10px;
-    
+
 }
 
-#box3{
+#box3 {
     width: 600px;
     height: 244px;
     background: #e2eefc;
@@ -79,17 +81,22 @@ body {
     margin-bottom: 20px;
 }
 
-#text{
+#text {
     font-size: 20px;
 }
-   
-#hobbies{
+
+#hobbies {
     font-size: 20px;
     margin-left: 20px;
 }
 
-.highlighttwo{
+.highlighttwo {
     color: #2A6A8E;
     font-size: 23px;
-   
+
+}
+
+#page {
+    font-size: 14px;
+    color: #ffffff;
 }

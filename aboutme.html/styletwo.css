@@ -1,0 +1,57 @@
+#name {
+    color: #ffffff;
+    font-family: glory;
+    width: 230px;
+    margin: 0px 0px 0px 400px;
+
+}
+
+#box {
+    height: 90px;
+    background: #2A6A8E;
+    padding: 14px 0px 0px 0px;
+    position: fixed;
+    width: 3000px;
+}
+
+#leftColum {
+    width: 313px;
+    float: left;
+    margin-top: 130px;
+    margin-left: 60px;
+}
+
+#middleColum {
+    width: 318px;
+    float: left;
+    margin-top: 130px;
+    margin-left: 50px;
+}
+
+#rightColum {
+    width: 666px;
+    float: right;
+    margin-top: 130px;
+    margin-left: 35px;
+    margin-right: 50px;
+}
+
+#computer {
+    margin-bottom: 15px;
+}
+
+#bushalte {
+    margin-left: 19px;
+}
+
+#babyface {
+    margin-bottom: 15px;
+}
+
+#bruidmeisje {
+    margin-bottom: 18px;
+}
+
+#body {
+background-color: #e8f6ff;
+}
