@@ -1,0 +1,68 @@
+//width, height, pixels per inch, name and mode
+var newDocument = app.documents.add(2550, 3300, 300, "add text/picture", NewDocumentMode.RGB,);
+
+//so that the image function works and so you can add layers
+var imagefile = app.openDialog ();
+var layers = newDocument.artlayers;
+
+//adds a new layer
+var layers = newDocument.artLayers;
+var newLayer = layers.add();
+newLayer.name = "text-layer";
+
+//makes the layer a text layer and adds the text item
+newLayer.kind = LayerKind.TEXT;
+var textItem = newLayer.textItem;
+
+//makes my text a random font
+var fonts = app.fonts;
+var randomFont = fonts[Math.floor(Math.random() * fonts.length)];
+
+//makes it the text the right color
+var myColour = new SolidColor();
+var rgb = myColour.rgb;
+rgb.red = 229;
+rgb.green = 179;
+rgb.blue = 229;
+
+//adjusting text with size and color and more
+textItem.font = randomFont.postScriptName;
+textItem.contents = "look at that picture!";
+textItem.size = 85;
+textItem.color = myColour;
+//gets it in the center
+textItem.justification = Justification.CENTER;
+textItem.position = [newDocument.width/2, 300];
+
+// to place an image
+var file = new File(imagefile);
+if(file.exists) { //If it doesn't exist it won't import and won't crash the script
+        placeFile(file);
+    }
+    var docRef =  app.activeDocument 
+    docRef.artLayers[0].move(docRef.artLayers[docRef.artLayers.length-1], ElementPlacement.PLACEBEFORE);
+
+// cleanup document for printing
+newDocument.flatten();
+newDocument.print();
+
+// function found on this site: https://community.adobe.com/t5/photoshop/photoshop-scripts-for-image-layers-javascript/m-p/9903887
+function placeFile(placeFile) {  
+
+    var desc21 = new ActionDescriptor();  
+
+    desc21.putPath( charIDToTypeID('null'), new File(placeFile) );  
+
+    desc21.putEnumerated( charIDToTypeID('FTcs'), charIDToTypeID('QCSt'), charIDToTypeID('Qcsa') );  
+
+    var desc22 = new ActionDescriptor();  
+
+    desc22.putUnitDouble( charIDToTypeID('Hrzn'), charIDToTypeID('#Pxl'), 0.000000 );  
+
+    desc22.putUnitDouble( charIDToTypeID('Vrtc'), charIDToTypeID('#Pxl'), 0.000000 );  
+
+    desc21.putObject( charIDToTypeID('Ofst'), charIDToTypeID('Ofst'), desc22 );  
+
+    executeAction( charIDToTypeID('Plc '), desc21, DialogModes.NO );  
+
+}
